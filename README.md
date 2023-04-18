@@ -19,3 +19,5 @@
 04.14 => Colab 실습 (파이썬 class) (오후 수업은 조퇴)
 
 04.17 => Colab 실습 (상속)
+
+04.18 => GCP (구글 클라우드) 실습 (VM 인스턴스 만들기, putty, HeidiSQL), Colab 실습 (파이썬과 mysql 연동)
