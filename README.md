@@ -21,3 +21,5 @@
 04.17 => Colab 실습 (상속)
 
 04.18 => GCP (구글 클라우드) 실습 (VM 인스턴스 만들기, putty, HeidiSQL), Colab 실습 (파이썬과 mysql 연동)
+
+04.19 => 클라우드 연동 이후 SQL문, 저장 프로시저 (stored procedure)
