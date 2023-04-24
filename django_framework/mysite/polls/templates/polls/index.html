@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block explain_contents %}
+<center>
+    <h2> Polls 질문 리스트 </h2>
+    <div class="container" style="width:60%">
+        <table class="table table-hover">
+            <tbody>
+            <tr>
+                <td>
+                    <h4>
+                        {% if latest_question_list %}
+                        <ul>
+                            {% for question in latest_question_list %}
+                            <!-- http://127.0.0.1/polls/detail/1 -->
+                            <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <p> No polls are available </p>
+                        {% endif %}
+                        <br>
+                    </h4>
+                </td>
+                <td>
+                    <div> view :</div>
+                    <div> db : 1:다의 테이블 관계 구현 </div>
+                    <div> db : manager의 개념과 ModelAdmin을 이용한 질문 데이터 입력 </div>
+                    <div> db : createsuperuser / createuser </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</center>
+{% endblock explain_contents %}
