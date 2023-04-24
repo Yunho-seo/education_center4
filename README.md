@@ -23,3 +23,5 @@
 04.18 => GCP (구글 클라우드) 실습 (VM 인스턴스 만들기, putty, HeidiSQL), Colab 실습 (파이썬과 mysql 연동)
 
 04.19 => 클라우드 연동 이후 SQL문, 저장 프로시저 (stored procedure)
+
+04.20 => 플라스크 기초 및 개성에 맞는 홈페이지 꾸미기
