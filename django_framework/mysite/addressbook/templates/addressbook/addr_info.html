@@ -1,0 +1,15 @@
+<div align="center">
+  <td width="20%" align="center">{{ addr_info.name }}</td>
+  <td width="20%" align="center">{{ addr_info.age }}</td>
+  <td width="40%" align="center">{{ addr_info.addr }}</td>
+  <td width="10%" align="center">
+    <a class="btn btn-default btn-xs" role="button"
+       href="{% url 'addressbook:addressbook_addr_info_update' addr_info.pk %}">
+      Update
+    </a></td>
+  <td width="10%" align="center">
+    <a class="btn btn-default btn-xs" role="button"
+       href="{% url 'addressbook:addressbook_addr_info_delete' addr_info.pk %}">
+      Delete
+    </a></td>
+</div>

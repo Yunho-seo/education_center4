@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block explain_contents %}
+
+<div align="center">
+  <a href="{% url 'addressbook:addressbook_addr_info_create' %}"> ---생성--- </a>
+</div>
+<br/>
+<table border="1" align="center">
+  <tr><td align="center">이름</td><td align="center">나이</td>
+    <td align="center">주소</td><td align="center">업데이트</td>
+    <td align="center">삭제</td>
+  </tr>
+    {% for addr_info in addr_infos %}
+      <tr> {% include "addressbook/addr_info.html" %}</tr>
+    {% empty %}
+      <tr>
+          <td colspan="5"> 아무도 없습니다. </td>
+      </tr>
+    {% endfor %}
+</table>
+{% endblock explain_contents %}

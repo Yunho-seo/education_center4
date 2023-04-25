@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block explain_contents %}
+
+<div align="center">
+  <a href="{% url 'forum:forum_forum_info_create' %}"> ---생성--- </a>
+</div>
+<br/>
+<table border="1" align="center">
+  <tr>
+    <td align="center">제목</td>
+    <td align="center">이름</td>
+    <td align="center">내용</td>
+    <td align="center">업데이트</td>
+    <td align="center">삭제</td>
+  </tr>
+    {% for forum_info in forum_infos %}
+      <tr> {% include "forum/forum_info.html" %}</tr>
+    {% empty %}
+      <tr>
+          <td colspan="5"> 글이 없습니다. </td>
+      </tr>
+    {% endfor %}
+</table>
+{% endblock explain_contents %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block explain_contents %}
+
+
+<div align="center">
+    <form method="post"> {% csrf_token %}
+      정말 "{{ object }}" (을/를) 삭제하시겠습니까?
+      <input type="submit" value="Submit" />
+    </form>
+    <br>
+</div>
+{% endblock explain_contents %}

@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "polls",
+    "sungjukcall",
+    "addressbook",
+    "forum"
 ]
 
 MIDDLEWARE = [

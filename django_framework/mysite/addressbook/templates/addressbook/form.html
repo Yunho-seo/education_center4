@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block explain_contents %}
+<div align="center">
+  {% if create %}생성{% else %}수정{% endif %} 주소록
+  <h2>
+    {% if create %} 주소록 작성
+    {% else %} 주소록 수정
+    {% endif %}
+  </h2>
+  {% if create %}
+    {% url "addressbook:addressbook_addr_info_create" as action_url %}
+  {% else %}
+    {% url "addressbook:addressbook_addr_info_update" pk=form.instance.pk as action_url %}
+  {% endif %}
+  <div style = "width:30%">
+    <form action="{{ action_url }}" method="post" accept-charset="utf-8">
+      {{ form }}
+      {% csrf_token %}
+      <p><input type="submit"  class="btn btn-default" value="Save"></p>
+    </form>
+  </div>
+</div>
+{% endblock explain_contents %}

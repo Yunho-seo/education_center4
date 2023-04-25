@@ -21,7 +21,11 @@ from mysite import views
 # urls 사용 => urlpatterns => path, re_path
 urlpatterns = [
     path("admin/", admin.site.urls),
-    re_path(r'^pandasgraph', views.pandasgraph, name='pandasgraph'),
-    re_path(r'^$', views.HomeView.as_view(), name='home'),  # HomeView는 Class, 클래스인 경우 as_view()를 호출
-    re_path(r'^polls/', include('polls.urls'))  # ^ : 맨 처음을 의미, regula expression (정규표현식)
+    path('pandasgraph', views.pandasgraph, name='pandasgraph'),
+    path('pandasgraph_call', views.pandasgraph_call, name='pandasgraph_call'),
+    path('', views.HomeView.as_view(), name='home'),  # HomeView는 Class, 클래스인 경우 as_view()를 호출
+    path('polls/', include('polls.urls')),  # ^ : 맨 처음을 의미, regula expression (정규표현식)
+    path('sungjukcall/', include('sungjukcall.urls')),
+    path('addressbook/', include('addressbook.urls')),
+    path('forum/', include('forum.urls'))
 ]

@@ -34,4 +34,5 @@ def pandasgraph(request):
     response['Content-Length'] = str(len(response.content))
     return response
 
-# 이름, 국어, 영어, 수학 출력하는 app을 작성하여 제출하시오 (mail, 이름_날짜)
+def pandasgraph_call(request):
+    return render(request, 'pandasgraph_call.html')

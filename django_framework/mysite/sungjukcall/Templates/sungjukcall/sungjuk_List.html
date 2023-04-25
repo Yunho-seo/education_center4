@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% block explain_contents %}
+<div align="center">
+    <a href="{% url 'sungjukcall:sungjuk_new' %}"><h4> 성적 입력 </h4></a>
+</div>
+<div class="container">
+    <h5> 성적 테이블</h5>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>이름</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+            <th>총점</th>
+            <th>평균</th>
+            <th>편집</th>
+            <th>삭제</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for sungjuk in object_list %}
+        <tr>
+            <td><a href="{% url 'sungjukcall:sungjuk_detail' sungjuk.id %}"> {{ sungjuk.name }}</a></td>
+            <td>{{ sungjuk.kor }}</td>
+            <td>{{ sungjuk.mat }}</td>
+            <td>{{ sungjuk.eng }}</td>
+            <td>{{ sungjuk.tot }}</td>
+            <td>{{ sungjuk.avg }}</td>
+            <td><a href="{% url 'sungjukcall:sungjuk_edit' sungjuk.id %}"> {{ sungjuk.id }} </a></td>
+            <td><a href="{% url 'sungjukcall:sungjuk_delete' sungjuk.id %}"> delete </a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock explain_contents %}

@@ -1,0 +1,15 @@
+<div align="center">
+  <td width="20%" align="center">{{ forum_info.subject }}</td>
+  <td width="20%" align="center">{{ forum_info.name }}</td>
+  <td width="40%" align="center">{{ forum_info.story }}</td>
+  <td width="10%" align="center">
+    <a class="btn btn-default btn-xs" role="button"
+       href="{% url 'forum:forum_forum_info_update' forum_info.pk %}">
+      Update
+    </a></td>
+  <td width="10%" align="center">
+    <a class="btn btn-default btn-xs" role="button"
+       href="{% url 'forum:forum_forum_info_delete' forum_info.pk %}">
+      Delete
+    </a></td>
+</div>
